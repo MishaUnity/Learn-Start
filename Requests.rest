@@ -1,0 +1,43 @@
+POST http://localhost:3000/users/Get_User 
+Content-Type: application/json
+
+{
+    "login" : "Misha_Unity"
+}
+
+###
+
+POST http://localhost:3000/users/Add_User
+Content-Type: application/json
+
+{
+    "login" : "GAGA",
+    "password" : 1234,
+    "name" : "Даша",
+    "surname" : "Басова",
+    "age" : 10,
+    "activiti" : 1
+}
+
+###
+
+POST http://localhost:3000/users/Give_Lesson
+Content-Type: application/json
+
+{
+    "id" : 10,
+    "lesson" : 1
+}
+
+###
+
+POST http://localhost:3000/users/Create_Lesson
+Content-Type: application/json
+
+{
+    "userid" : 10,
+    "name" : "Основы С++",
+    "url" : ["laka", "paka", "Data"],
+    "lessons" : ["Основы С++", "Массивы С++", "Классы С++"],
+    "price" : 45
+}
