@@ -2,7 +2,8 @@ POST http://localhost:3000/users/Get_User
 Content-Type: application/json
 
 {
-    "login" : "Misha_Unity"
+    "login" : "Dasha",
+    "password" : "1235"
 }
 
 ###

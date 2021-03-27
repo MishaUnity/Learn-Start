@@ -16,23 +16,31 @@ router.post('/Get_User', function(req, res, next)
 {
   //Класс с данными
   var This_User = new User;
+  
+  //Пакет данных
+  var data = [req.body.login, req.body.password];
 
   //SQL запрос
-  db.any('SELECT * FROM users WHERE login = "Misha_Unity"')
+  db.any('SELECT * FROM users WHERE login = $1 AND password = $2', data)
   .then(function(result) 
   {
-    //вбивание данных в класс
-    /*
-    This_User.id = result[0].id;
-    This_User.login = result[0].login;
-    This_User.password = result[0].password;
-    This_User.name = result[0].name;
-    This_User.surname = result[0].surname;
-    This_User.age = result[0].age;
-    */
+    if(result && result.length == 1)
+    {
+      //вбивание данных в класс
+      This_User.id = result[0].id;
+      This_User.login = result[0].login;
+      This_User.password = result[0].password;
+      This_User.name = result[0].name;
+      This_User.surname = result[0].surname;
+      This_User.age = result[0].age;
+    }
+    else
+    {
+      This_User.id = 0;
+    }
 
     //отправка класса с данными клиенту
-    res.send(result);
+    res.send(This_User);
   })
   .catch(function(error) 
   {
