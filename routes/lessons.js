@@ -21,6 +21,25 @@ router.post('/Give_Lesson', function(req, res, next)
   });
 });
 
+//получение уроков пользователя
+router.post('/User_Lessons', function(req, res, next) 
+{
+  //индетификатор пользователя
+  var data = [req.body.id];
+
+  //SQL запрос
+  db.any('SELECT lesson_id FROM user_lessons WHERE user_id = $1', data)
+  .then(function(result) 
+  {
+    res.send(result);
+  })
+  .catch(function(error) 
+  {
+    //вывод ошибки(если она появилась)    
+    console.log(error);
+  });
+});
+
 //Создание курса
 router.post('/Create_Lesson', function(req, res, next) 
 {

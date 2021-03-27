@@ -11,6 +11,7 @@ class User
   surname;
 }
 
+
 //Получение данных пользователя
 router.post('/Get_User', function(req, res, next) 
 {
@@ -48,6 +49,27 @@ router.post('/Get_User', function(req, res, next)
     console.log(error);
   });
 });
+
+
+//Обновление данных пользователя
+router.post('/Update_User', function(req, res, next) 
+{ 
+  //Пакет данных
+  var data = [req.body.password, req.body.name, req.body.surname, req.body.age, req.body.activiti, req.body.id];
+
+  //SQL запрос
+  db.any('UPDATE users SET password = $1, name = $2, surname = $3, age = $4, activite = $5 WHERE id = $6', data)
+  .then(function(result) 
+  {
+    res.sendStatus(200);
+  })
+  .catch(function(error) 
+  {
+    //вывод ошибки(если она появилась)
+    console.log(error);
+  });
+});
+
 
 //добавление нового пользователя
 router.post('/Add_User', function(req, res, next) 

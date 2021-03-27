@@ -22,6 +22,20 @@ Content-Type: application/json
 
 ###
 
+POST http://localhost:3000/users/Update_User 
+Content-Type: application/json
+
+{
+    "password" : "1235",
+    "name" : "ЛЯЛЯ",
+    "surname" : "Вафля",
+    "age" : 20,
+    "activiti" : 2,
+    "id" : 24
+}
+
+###
+
 POST http://localhost:3000/lessons/Give_Lesson
 Content-Type: application/json
 
@@ -48,6 +62,24 @@ Content-Type: application/json
 
 {
     "lesson_id" : 1,
-    "url" : "Основы С++",
-    "name" : "Вы не понимаете - это другое"
+    "url" : "Основы С#",
+    "name" : "ЦК КПСС"
+}
+
+###
+
+POST http://localhost:3000/videos/Get_Videos
+Content-Type: application/json
+
+{
+    "id" : 1
+}
+
+###
+
+POST http://localhost:3000/lessons/User_Lessons
+Content-Type: application/json
+
+{
+    "id" : 9
 }
