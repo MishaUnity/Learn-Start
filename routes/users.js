@@ -55,10 +55,10 @@ router.post('/Get_User', function(req, res, next)
 router.post('/Update_User', function(req, res, next) 
 { 
   //Пакет данных
-  var data = [req.body.password, req.body.name, req.body.surname, req.body.age, req.body.activiti, req.body.id];
+  var data = [req.body.password, req.body.name, req.body.surname, req.body.age, req.body.id];
 
   //SQL запрос
-  db.any('UPDATE users SET password = $1, name = $2, surname = $3, age = $4, activite = $5 WHERE id = $6', data)
+  db.any('UPDATE users SET password = $1, name = $2, surname = $3, age = $4 WHERE id = $5', data)
   .then(function(result) 
   {
     res.sendStatus(200);
@@ -75,10 +75,10 @@ router.post('/Update_User', function(req, res, next)
 router.post('/Add_User', function(req, res, next) 
 {
   //данные пользователя
-  var data = [req.body.login, req.body.password, req.body.name, req.body.surname, req.body.age, req.body.activiti];
+  var data = [req.body.login, req.body.password, req.body.name, req.body.surname, req.body.age];
 
   //SQL запрос
-  db.any('INSERT INTO users (login, password, name, surname, age, activite) VALUES ($1, $2, $3, $4, $5, $6)', data)
+  db.any('INSERT INTO users (login, password, name, surname, age) VALUES ($1, $2, $3, $4, $5)', data)
   .then(function(result) 
   {
     res.sendStatus(200);

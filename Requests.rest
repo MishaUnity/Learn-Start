@@ -16,8 +16,7 @@ Content-Type: application/json
     "password" : "Sos",
     "name" : "Даша",
     "surname" : "Басова",
-    "age" : 10,
-    "activiti" : 1
+    "age" : 10
 }
 
 ###
@@ -30,8 +29,7 @@ Content-Type: application/json
     "name" : "Беее",
     "surname" : "Вафля",
     "age" : 20,
-    "activiti" : 2,
-    "id" : 26
+    "id" : 27
 }
 
 ###
@@ -82,4 +80,33 @@ Content-Type: application/json
 
 {
     "id" : 26
+}
+
+###
+
+POST http://localhost:3000/comments/Add_Comment
+Content-Type: application/json
+
+{
+    "user_id" : 26,
+    "lesson_id" : 1,
+    "comment" : "Ужасный курс"
+}
+
+###
+
+POST http://localhost:3000/comments/Get_Comment/By_User
+Content-Type: application/json
+
+{
+    "id": 26
+}
+
+###
+
+POST http://localhost:3000/comments/Get_Comment/By_Lesson
+Content-Type: application/json
+
+{
+    "id": 1
 }
