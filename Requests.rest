@@ -21,7 +21,7 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:3000/users/Give_Lesson
+POST http://localhost:3000/lessons/Give_Lesson
 Content-Type: application/json
 
 {
