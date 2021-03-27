@@ -57,3 +57,5 @@ router.post('/Create_Lesson', function(req, res, next)
     });
   }
 });
+
+module.exports = router;

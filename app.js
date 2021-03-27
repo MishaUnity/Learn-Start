@@ -7,6 +7,7 @@ var logger = require('morgan');
 //Пути
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var lessonsRouter = require('./routes/lessons');
 
 var app = express();
 
@@ -18,5 +19,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/lessons', lessonsRouter);
 
 module.exports = app;
