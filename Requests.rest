@@ -2,8 +2,8 @@ POST http://localhost:3000/users/Get_User
 Content-Type: application/json
 
 {
-    "login" : "Dasha",
-    "password" : "1235"
+    "login" : "DADA",
+    "password" : "Sea"
 }
 
 ###
@@ -12,8 +12,8 @@ POST http://localhost:3000/users/Add_User
 Content-Type: application/json
 
 {
-    "login" : "GAGA",
-    "password" : 1234,
+    "login" : "DADA",
+    "password" : "Sos",
     "name" : "Даша",
     "surname" : "Басова",
     "age" : 10,
@@ -26,12 +26,12 @@ POST http://localhost:3000/users/Update_User
 Content-Type: application/json
 
 {
-    "password" : "1235",
-    "name" : "ЛЯЛЯ",
+    "password" : "Sea",
+    "name" : "Беее",
     "surname" : "Вафля",
     "age" : 20,
     "activiti" : 2,
-    "id" : 24
+    "id" : 26
 }
 
 ###
@@ -40,7 +40,7 @@ POST http://localhost:3000/lessons/Give_Lesson
 Content-Type: application/json
 
 {
-    "id" : 10,
+    "id" : 26,
     "lesson" : 1
 }
 
@@ -81,5 +81,5 @@ POST http://localhost:3000/lessons/User_Lessons
 Content-Type: application/json
 
 {
-    "id" : 9
+    "id" : 26
 }
