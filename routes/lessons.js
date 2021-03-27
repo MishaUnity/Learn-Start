@@ -25,37 +25,21 @@ router.post('/Give_Lesson', function(req, res, next)
 router.post('/Create_Lesson', function(req, res, next) 
 {
   //Первый пакет данных о курсе
-  var data_1 = [req.body.userid, req.body.name, req.body.price];
+  var data_1 = [req.body.userid, req.body.name, req.body.price, req.body.url, req.body.lessons];
 
   //SQL запрос
-  db.any('INSERT INTO user_lessons (userid, name, price) VALUES ($1, $2, $3)', data_1)
+  db.any('INSERT INTO lessons (userid, name, price) VALUES ($1, $2, $3) RETURNING id', data_1)
   .then(function(result) 
   {
-    res.sendStatus(200);
+    var lesson = { id: result[0].id }
+
+    res.send(lesson);
   })
   .catch(function(error) 
   {
     //вывод ошибки(если она появилась)
     console.log(error);
   });
-
-  //Второй пакет данных о курсе
-  var data_2 = [req.body.url, req.body.lessons];
-
-  //SQL запрос
-  for(var num = 0; num < req.body.url.lenght; num ++)
-  {
-  db.any('INSERT INTO user_lessons (lesson_id, url, name) VALUES (LEFT JOIN , $1, $2)', data_2)
-  .then(function(result) 
-    {
-      res.sendStatus(200);
-    })
-    .catch(function(error) 
-    {
-      //вывод ошибки(если она появилась)    
-      console.log(error);
-    });
-  }
 });
 
 module.exports = router;

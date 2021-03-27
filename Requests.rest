@@ -32,13 +32,22 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:3000/users/Create_Lesson
+POST http://localhost:3000/lessons/Create_Lesson
 Content-Type: application/json
 
 {
     "userid" : 10,
     "name" : "Основы С++",
-    "url" : ["laka", "paka", "Data"],
-    "lessons" : ["Основы С++", "Массивы С++", "Классы С++"],
     "price" : 45
+}
+
+###
+
+POST http://localhost:3000/videos/Add_Video
+Content-Type: application/json
+
+{
+    "lesson_id" : 1,
+    "url" : "Основы С++",
+    "name" : "Вы не понимаете - это другое"
 }
