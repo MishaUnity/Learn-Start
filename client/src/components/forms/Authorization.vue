@@ -74,21 +74,22 @@ html{
 
 /* BOX LOGIN */
 .box{
-  position: relative;
+  position: fixed;
   margin: auto;
   height: 365px;
-  top: 40px;
+  top: 120px;
   left: 0;
   z-index: 200;
   right: 0;
   width:400px;
   color:#666;
   padding:10px 0px;
-  border-radius: 10px;
-  background:rgba(255,255,255,1);
-  border-top: 2px solid #000766e7;
-  border-bottom: 2px solid #000766e7;
+  border-radius: 5px;
+  background:rgba(238, 238, 238, 0.397);
+  border-top: 2px solid #0026a5e7;
+  border-bottom: 2px solid #0030cce7;
   margin-bottom: 100px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 .box h1{
   text-align:center;
@@ -102,24 +103,24 @@ html{
 .box button{
   background:#00287ec7;
   border:0;
-  color:#fff;
-  padding:4px;
-  font-size:20px;
+  color:rgb(255, 255, 255);
+  padding: 8px;
+  font-size:15px;
   width:330px;
   margin:15px auto;
   display:block;
   cursor:pointer;
-    -webkit-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  border-radius: 10px;
+  border-radius: 12;
 }
 
 .box button:active{
-  background:#27ae60;
+  background:#2746ae;
 }
 
 .box button:hover{
-  background:   #0044ff;
+  background:   #1797ff;
     -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
@@ -183,6 +184,7 @@ label          {
   transition:0.2s ease all; 
   -moz-transition:0.2s ease all; 
   -webkit-transition:0.2s ease all;
+  border-radius: 10;
 }
 
 /* active state */
@@ -231,7 +233,7 @@ label          {
   to  { width:0; background:transparent; }
 }
 @-moz-keyframes inputHighlighter {
-  from { background:#5264AE; }
+  from { background:#4c6be9; }
   to  { width:0; background:transparent; }
 }
 @keyframes inputHighlighter {

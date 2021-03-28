@@ -3,13 +3,12 @@
     <div class="main-page">
         <wrapper/>
         <main-menu/>
-    <div class="png">
-       <img 
-        :src="imgUrl" 
-        width=""
-        >
-    </div>
+   <div class="image">
+       
+   </div>
+    
 </div>
+
 </template>
 <script>
 import MainMenu from '../wrappers/mainMenu.vue'
@@ -20,13 +19,9 @@ export default {
       Wrapper,
       MainMenu
       },
-    props: {
-        imgUrl: {
-            type: String,
-            default: './assets/images/laptop-336373_1920.jpg'
+  
     }
-    }
-}
+
 </script>
 <style scoped>
 .body{
@@ -34,6 +29,7 @@ export default {
     height: 900px;
     display: block;
     position: absolute;
+  
 }
 
 </style>

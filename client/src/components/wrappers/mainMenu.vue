@@ -3,9 +3,8 @@
         
     <div class="mainMenu">
         
-    <div class="block-menu" v-bind="image">
-        
-        <h4>Первые 3 курса - бесплатно</h4>
+    <div class="block-menu" v-bind:style="{backgroundImage: 'url(./components/assets/images/logo.jpg)'}">
+    <div class="text">
        <h1>Профессия Разработчик игр на Unity</h1>
         <p> Мечтаете создать игру со своим сюжетом, дисплеем и графикой? Хотите придумать 
             <br> и раскрутить игру с нуля, без каких-либо умений и научится писать на C#, 
@@ -16,6 +15,7 @@
          <br>
         <button>Записаться на курс</button>
     </div>
+   </div>
     </div>
 </template>
 <script>
@@ -32,36 +32,35 @@ export default {
 .mainMenu{
     text-align: left;
     display: flex;
-    flex-direction: column;
     font-size: 15px;
+    
 }
-.block{
-   font-size: 15px;
-   display: flex;
-   text-align: inherit;
+h1{
+    margin: 0 0 32px;
+    font-size: 50px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: -1px;
 }
-button {
-    appearance: auto;
-    -webkit-writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    color: -internal-light-dark(rgba(0, 31, 172, 0.726), rgba(50, 49, 110, 0.664));
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
+p{
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 400
+}
+button{
     display: inline-block;
-    text-align: center;
-    align-items: flex;
-    cursor: default;
-    background-color: -internal-light-dark(rgba(0, 31, 172, 0.726), rgba(50, 49, 110, 0.664));
-    box-sizing: border-box;
-    margin: 0em;
-    font: 400 13.3333px Arial;
-    padding: 1px 6px;
-    border-width: 2px;
-    border-style: outset;
-    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-    border-image: initial;
+    margin-right: 20px;
+    padding: 20px 48px;
+    border-radius: 12px;
+    background-color: #6654d9;
+    color: #fff;
+    font-size: 10px;
+    line-height: 1;
+    font-weight: 600px;
+    text-decoration: none
+}
+.text{
+    top: -40px;
+
 }
 </style>
