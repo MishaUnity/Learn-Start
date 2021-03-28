@@ -69,8 +69,5 @@ button{
     margin-left: 35px;
     margin-top: 89px;
     top: -40px;
-    
-    
-    
 }
 </style>

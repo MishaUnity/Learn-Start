@@ -86,6 +86,8 @@ color: red;
        padding: 21px;
        color: initial;
        text-decoration: initial;
-       
+       -webkit-transition: all 0.25s;
+        transition: all 0.25s;
+        color: rgba(85, 85, 85, 0.863);
    }
 </style>
