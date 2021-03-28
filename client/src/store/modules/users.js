@@ -13,7 +13,7 @@ export default
     getters: {
         Get_User(state, param_id) 
         {
-            id(param_id == 0)
+            if(param_id == 0)
                 return state.userId; 
 
             if(param_id == 1)

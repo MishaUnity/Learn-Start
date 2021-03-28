@@ -49,6 +49,7 @@ export default {
        background-color:#776dfcc7;
        height: 60px;
        box-shadow: 0 0 10px rgba(102, 130, 255, 0.473);
+       font-family: sans-serif;
        }
 
    #logo{
