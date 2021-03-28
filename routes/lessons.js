@@ -2,6 +2,14 @@ var express = require('express');
 var router = express.Router();
 var db = require('../bd');
 
+class lesson
+{
+  id;
+  owner;
+  name;
+  price;
+}
+
 //выдача пользователю курс
 router.post('/Give_Lesson', function(req, res, next) 
 {
@@ -53,6 +61,33 @@ router.post('/Create_Lesson', function(req, res, next)
     var lesson = { id: result[0].id }
 
     res.send(lesson);
+  })
+  .catch(function(error) 
+  {
+    //вывод ошибки(если она появилась)
+    console.log(error);
+  });
+});
+
+
+//Получение курса по id
+router.post('/Get_Lesson', function(req, res, next) 
+{
+  //Первый пакет данных о курсе
+  var data = [req.body.id];
+
+  //SQL запрос
+  db.any('SELECT * FROM lessons WHERE id = $1', data)
+  .then(function(result) 
+  {
+    var Get_lesson = new lesson;
+
+    Get_lesson.id = result[0].id;
+    Get_lesson.name = result[0].name;
+    Get_lesson.owner = result[0].userid;
+    Get_lesson.price = result[0].price;
+
+    res.send(Get_lesson);
   })
   .catch(function(error) 
   {

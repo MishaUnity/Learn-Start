@@ -4,8 +4,9 @@ var db = require('../bd');
 
 class video
 {
+    id;
     url;
-    name
+    name;
 }
 
 //Добовление видео в курс
@@ -27,6 +28,25 @@ router.post('/Add_Video', function(req, res, next)
   });
 });
 
+//Удаление видеоролика
+router.post('/Delete_Video', function(req, res, next) 
+{
+  //индетификаторы пользователя и курса
+  var data = [req.body.id];
+
+  //SQL запрос
+  db.any('DELETE FROM videos WHERE id = $1', data)
+  .then(function(result) 
+  {
+    res.sendStatus(200);
+  })
+  .catch(function(error) 
+  {
+    //вывод ошибки(если она появилась)    
+    console.log(error);
+  });
+});
+
 //Получение всех видеороликов из курса
 router.post('/Get_Videos', function(req, res, next) 
 {
@@ -36,13 +56,14 @@ router.post('/Get_Videos', function(req, res, next)
   var videos = [new video];
 
   //SQL запрос
-  db.any('Select url, name FROM videos WHERE lesson_id = $1', data)
+  db.any('Select id, url, name FROM videos WHERE lesson_id = $1', data)
 
   .then(function(result) 
   {
     for(var num = 0; num < result.length; num ++)
     {
         var new_video = new video;
+        new_video.id = result[num].id;
         new_video.url = result[num].url;
         new_video.name = result[num].name;
 
