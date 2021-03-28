@@ -1,9 +1,11 @@
 <template>
+
     <div class="main-page">
         <wrapper/>
         <main-menu/>
        
     </div>
+    
 </template>
 <script>
 import MainMenu from '../wrappers/mainMenu.vue'
