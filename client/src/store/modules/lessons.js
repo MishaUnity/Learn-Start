@@ -2,6 +2,7 @@ import axios from 'axios'
 
 export default
 {
+    //переменные
     state: {
         id : 0,
         owner,
@@ -9,6 +10,7 @@ export default
         price
     },
     getters: {
+        //получение данных
         Get_User(state, param_id) 
         {
             if(param_id == 0)
@@ -25,6 +27,7 @@ export default
         }
     },
     mutations: {
+        //установка данных в переменные
         Set_Lesson(state, id, owner, lesson_name, price)
         {
             state.id = id;
@@ -34,6 +37,7 @@ export default
         }
     },
     actions: {
+        //выдача курса пользователю
         GIVE_LESSON({commit}, params)
         {
             axios.post('http://localhost:3000/lessons/Give_Lesson', params)
@@ -42,6 +46,7 @@ export default
                 console.log(error);
             })
         },
+        //создание курса
         CREATE_LESSON({commit}, params)
         {
             axios.post('http://localhost:3000/lessons/Create_Lesson', params)
@@ -50,6 +55,7 @@ export default
                 console.log(error);
             })
         },
+        //получение данные о курсе
         GET_LESSON({commit}, params)
         {
             axios.post('http://localhost:3000/lessons/Get_Lesson', params)

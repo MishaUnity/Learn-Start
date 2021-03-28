@@ -2,6 +2,7 @@ import axios from 'axios'
 
 export default
 {
+    //переменные
     state: {
         userId: 0,
         login,
@@ -11,6 +12,7 @@ export default
         age
     },
     getters: {
+        //получение данных
         Get_User(state, param_id) 
         {
             if(param_id == 0)
@@ -33,6 +35,7 @@ export default
         }
     },
     mutations: {
+        //установка данных в переменные
         SET_USER(state, id, login, password, user_name, surname, age)
         {
             userId = id;
@@ -45,6 +48,7 @@ export default
     },
     actions:
     {
+        //Авторизация
         LOGIN({commit}, params)
         {
             axios.post('http://localhost:3000/users/Get_User', params)
@@ -58,6 +62,7 @@ export default
                 console.log(error);
             })
         },
+        //Регистрация
         REGISTRATION({commit}, params)
         {
             axios.post('http://localhost:3000/users/Add_User', params)
@@ -66,6 +71,7 @@ export default
                 console.log(error);
             })
         },
+        //Обновление данных
         UPDATE({commit}, params)
         {
             axios.post('http://localhost:3000/users/Update_User', params)
