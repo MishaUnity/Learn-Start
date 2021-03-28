@@ -43,9 +43,9 @@ export default {
        margin: 0 auto;
        font-size: 14px;
        overflow: hidden;
-       background-color:#abbdefc7;
+       background-color:#776dfcc7;
        height: 60px;
-
+       box-shadow: 0 0 10px rgba(102, 130, 255, 0.473);
        }
 
    #logo{
@@ -77,12 +77,14 @@ export default {
 
    }
    ul.nav li:hover a {
-color: red;
+       color: rgb(48, 76, 138);
+       transition: 0.3s ease all; 
    }
    ul.nav li a{
        padding: 21px;
        color: initial;
        text-decoration: initial;
-       
+       color: rgb(255, 255, 255);
+       transition: 0.3s ease all; 
    }
 </style>
