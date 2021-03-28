@@ -11,10 +11,10 @@
                         <router-link to="/main">Главная</router-link>
                     </li>
                     <li>
-                        <a href="..components/transition.block">Курсы</a>
+                        <router-link to="/main">Курсы</router-link>
                     </li>
                     <li>
-                        <a href="#"><img src="assets/images/image.jpg" alt="">Блог</a>
+                        <router-link to="/blog">Блог</router-link>
                     </li>
                 </ul>
             </div>
