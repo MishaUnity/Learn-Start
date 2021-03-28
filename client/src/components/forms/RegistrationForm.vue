@@ -1,5 +1,6 @@
 <template>
     <div class="RegistrationForm">
+            
         <form v-on:submit.prevent="onSubmit">
         <h2>Регистрация</h2>
         <label></label>
@@ -32,6 +33,7 @@
     </div>
 </template>
 <script>
+
 export default {
    name: 'RegistrationForm',
    data() {
@@ -48,7 +50,8 @@ export default {
            // добавить вызов действия
            this.$router.push({name: 'login'})
        }
-   }
+   },
+   
 }
 
 </script>

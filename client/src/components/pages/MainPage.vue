@@ -1,22 +1,27 @@
 <template>
+
     <div class="main-page">
         <wrapper/>
-        <h2>Курсы:</h2>
+        <main-menu/>
+   <div class="image">
+       
+   </div>
+    
+</div>
 
-        <a href=""></a>
-    </div>
 </template>
 <script>
+import MainMenu from '../wrappers/mainMenu.vue'
 import Wrapper from '../wrappers/Wrapper.vue'
 export default {
      name: 'MainPage',
   components: { 
-      Wrapper 
+      Wrapper,
+      MainMenu
       },
-   data(){
+  
+    }
 
-   }
-}
 </script>
 <style scoped>
 .body{
@@ -24,8 +29,7 @@ export default {
     height: 900px;
     display: block;
     position: absolute;
+  
 }
-.image-block{
 
-}
 </style>

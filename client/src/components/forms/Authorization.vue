@@ -74,10 +74,10 @@ html{
 
 /* BOX LOGIN */
 .box{
-  position: relative;
+  position: fixed;
   margin: auto;
   height: 365px;
-  top: 40px;
+  top: 120px;
   left: 0;
   z-index: 200;
   right: 0;
@@ -112,7 +112,11 @@ html{
   cursor:pointer;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+<<<<<<< HEAD
   border-radius: 10;
+=======
+  border-radius: 12;
+>>>>>>> 7fcdecd942179da5d8251b0854f2e26564bd12e1
 }
 
 .box button:active{

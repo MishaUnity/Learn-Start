@@ -14,7 +14,7 @@
                         <a href="..components/transition.block">Курсы</a>
                     </li>
                     <li>
-                        <a href="#"></a>
+                        <a href="#"><img src="assets/images/image.jpg" alt=""></a>
                     </li>
                 </ul>
             </div>
@@ -25,7 +25,10 @@
 
 
 export default {
-    name:'MainPages'
+    name:'MainPages',
+    components:{
+          
+    }
 }
 </script>
 <style scoped>

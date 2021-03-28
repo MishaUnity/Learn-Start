@@ -9,6 +9,7 @@ class User
   password; 
   name; 
   surname;
+  age;
 }
 
 
