@@ -61,19 +61,19 @@ export default {
    margin-left: 50px;
 }
 *{font-family:geometria;}
-form{background-color:white;
- box-shadow: 0 0 10px rgba(0,0,0,0.5);
- padding-left:35px;
- padding-right:35px;
- padding-top:35px;
- padding-bottom:50px;
- width: 350px;
- float: left;
- left: 30%;
- position: absolute;
- margin-top:30px;
- margin-left: 100px;
-border-radius: 10px;
+form{background-color:rgba(231, 231, 231, 0.397);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding-left:35px;
+  padding-right:35px;
+  padding-top:35px;
+  padding-bottom:50px;
+  width: 350px;
+  float: left;
+  left: 30%;
+  position: absolute;
+  margin-top:30px;
+  margin-left: 100px;
+  border-radius: 10px;
 }
 .feedback-input {
  color:#283944d3;
@@ -81,14 +81,14 @@ border-radius: 10px;
  font-weight:300;
  font-size: 18px;
  line-height: 22px;
- background-color: #fbfbfb;
+ background-color: rgba(231, 231, 231, 0.397);
  padding: 13px 13px 13px 5px;
 width:100%;
  box-sizing: border-box;
  border: 3px solid rgba(0,0,0,0);
 }
 .feedback-input:focus{
- background: #fff;
+ background: rgb(202, 202, 202);
  box-shadow: 0 0 5px rgba(0, 0, 0, 0.356);
  border: 2px solid #283944d3;
  color: 6ec4fb;

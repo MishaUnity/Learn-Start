@@ -8,7 +8,7 @@
                     </li>
                 <ul class="nav">
                     <li>
-                        <a href="#">Главная</a>
+                        <router-link to="/main">Главная</router-link>
                     </li>
                     <li>
                         <a href="..components/transition.block">Курсы</a>
@@ -25,7 +25,7 @@
 
 
 export default {
-    name:'MainPages',
+    name:'Wrapper',
     components:{
           
     }
@@ -46,9 +46,14 @@ export default {
        margin: 0 auto;
        font-size: 14px;
        overflow: hidden;
-       background-color:#6e90eec7;
-       height: 60px;
 
+       background-color:#6e90eec7;
+
+       background-color:#776dfcc7;
+
+       height: 60px;
+       box-shadow: 0 0 10px rgba(102, 130, 255, 0.473);
+       font-family: sans-serif;
        }
 
    #logo{
@@ -80,14 +85,18 @@ export default {
 
    }
    ul.nav li:hover a {
-color: red;
+       color: rgb(48, 76, 138);
+       transition: 0.3s ease all; 
    }
    ul.nav li a{
        padding: 21px;
        color: initial;
-       text-decoration: initial;
+       text-decoration: initia;
        -webkit-transition: all 0.25s;
         transition: all 0.25s;
         color: rgba(85, 85, 85, 0.863);
+
+       
+
    }
 </style>

@@ -6,6 +6,7 @@
         <wrapper/>
         <main-menu/>
         <background/>
+        
    <div class="image">
     </div>
    </div>
@@ -17,12 +18,14 @@
 import MainMenu from '../wrappers/mainMenu.vue'
 import Wrapper from '../wrappers/Wrapper.vue'
 import background from '../background/background'
+
 export default {
      name: 'MainPage',
   components: { 
       Wrapper,
       MainMenu,
       background
+     
       },
   
     }

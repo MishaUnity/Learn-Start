@@ -4,7 +4,7 @@ import VueRouter from 'vue-router'
 import MainPage from '../components/pages/MainPage'
 import LoginPage from '../components/pages/LoginPage'
 import RegistrationPage from '../components/pages/RegistrationPage'
-import Block from '../components/transition/block.vue'
+import Blogpage from '../components/pages/Blogpage'
 
 
 Vue.use(VueRouter);
@@ -28,9 +28,9 @@ let router = new VueRouter({
             component: RegistrationPage
         },
         {
-            name:'block',
-            path: '/block',
-            component: Block
+            name: 'blogpage',
+            path: '/blog',
+            component: Blogpage
         }
 
     ]

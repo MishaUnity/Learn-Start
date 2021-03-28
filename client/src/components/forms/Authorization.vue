@@ -73,6 +73,7 @@ html{
 }
 
 /* BOX LOGIN */
+
 .box{
   position: fixed;
   margin: auto;
@@ -90,6 +91,7 @@ html{
   border-bottom: 2px solid #0030cce7;
   margin-bottom: 100px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  font-family: sans-serif;
 }
 .box h1{
   text-align:center;
@@ -112,6 +114,7 @@ html{
   cursor:pointer;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+
   border-radius: 12;
 }
 
@@ -146,8 +149,6 @@ html{
   border-left: 1px solid    #ccc;
   text-align: center;
 }
-
-
 
 
 #textchange{
