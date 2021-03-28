@@ -145,8 +145,6 @@ html{
 }
 
 
-
-
 #textchange{
   cursor:pointer;
   color:#666;

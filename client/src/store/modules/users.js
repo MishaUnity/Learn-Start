@@ -11,20 +11,36 @@ export default
         age
     },
     getters: {
-        USER_ID(state) 
+        Get_User(state, param_id) 
         {
-            return state.userId;
+            id(param_id == 0)
+                return state.userId; 
+
+            if(param_id == 1)
+                return state.login;
+
+            if(param_id == 2)
+                return state.password;
+
+            if(param_id == 3)
+                return state.user_name;
+
+            if(param_id == 4)
+                return state.surname;
+
+            if(param_id == 5)
+                return state.age;
         }
     },
     mutations: {
-        SET_USER_ID(state, id)
-        {
-            userId = id;
-        },
         SET_USER(state, id, login, password, user_name, surname, age)
         {
             userId = id;
-
+            state.login = login;
+            state.password = password;
+            state.user_name = user_name;
+            state.surname = surname;
+            state.age = age;
         }
     },
     actions:
@@ -34,7 +50,8 @@ export default
             axios.post('http://localhost:3000/users/Get_User', params)
             .then(function(result)
             {
-                commit('SET_USER_ID', result.data.id)
+                commit('SET_USER', result.data.id, result.data.login, result.data.password, result.data.name,
+                result.data.surname, result.data.age);
             })
             .catch(function(error)
             {
@@ -44,6 +61,14 @@ export default
         REGISTRATION({commit}, params)
         {
             axios.post('http://localhost:3000/users/Add_User', params)
+            .catch(function(error)
+            {
+                console.log(error);
+            })
+        },
+        UPDATE({commit}, params)
+        {
+            axios.post('http://localhost:3000/users/Update_User', params)
             .catch(function(error)
             {
                 console.log(error);
