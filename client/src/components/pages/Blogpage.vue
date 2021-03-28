@@ -1,5 +1,6 @@
 <template>
     <div class="blogpage">
+        <wrapper/>
         <div class="main-columns">
          <article>
              <a href=""></a>
@@ -11,17 +12,45 @@
                             <p>Спросите коллег, с которыми работаете в одной команде и которым доверяете, о своих слабых сторонах.
                            <br> Объясните, почему для вас это важно. Пусть они знают, вы исследуете свои «гибкие» навыки.
                            <br> Будьте беспристрастными и слушайте внимательно, не перебивая. Соберите всю информацию и внимательно проанализируйте.</p>
+                           <button>читать дальше</button>
                     </div>
                  </div>
          </article>
-        
-
-       
+          <article>
+             <a href=""></a>
+                <div class="post-text"> 
+                  <div class="post-title">
+                        <h3>Soft Wars: прокачиваем soft skills за 7 дней</h3>
+                  </div>
+                    <div class="text-content">
+                            <p>Спросите коллег, с которыми работаете в одной команде и которым доверяете, о своих слабых сторонах.
+                           <br> Объясните, почему для вас это важно. Пусть они знают, вы исследуете свои «гибкие» навыки.
+                           <br> Будьте беспристрастными и слушайте внимательно, не перебивая. Соберите всю информацию и внимательно проанализируйте.</p>
+                           <button>читать дальше</button>
+                    </div>
+                 </div>
+         </article>
+          <article>
+             <a href=""></a>
+                <div class="post-text"> 
+                  <div class="post-title">
+                        <h3>Soft Wars: прокачиваем soft skills за 7 дней</h3>
+                  </div>
+                    <div class="text-content">
+                            <p>Спросите коллег, с которыми работаете в одной команде и которым доверяете, о своих слабых сторонах.
+                           <br> Объясните, почему для вас это важно. Пусть они знают, вы исследуете свои «гибкие» навыки.
+                           <br> Будьте беспристрастными и слушайте внимательно, не перебивая. Соберите всю информацию и внимательно проанализируйте.</p>
+                           <button>читать дальше</button>
+                    </div>
+                 </div>
+         </article>
         </div>
     </div>
 </template>
 <script>
+import Wrapper from '../wrappers/Wrapper.vue'
 export default {
+  components: { Wrapper },
 }
 
 </script>
@@ -68,6 +97,9 @@ export default {
     border-radius: 2px 2px 0 0;
     display: block;
     word-break: break-word;
+    margin-top: 25px;
+    background: #f1eaea;
+    margin-left: 118px;
 }
 p{
     margin-block-start: 0.83em;

@@ -31,6 +31,11 @@ let router = new VueRouter({
             name: 'blogpage',
             path: '/blog',
             component: Blogpage
+        },
+        {
+            name: 'coursepage',
+            path: '/coursepage',
+            component: Blogpage
         }
 
     ]

@@ -11,7 +11,7 @@
                         <router-link to="/main">Главная</router-link>
                     </li>
                     <li>
-                        <router-link to="/main">Курсы</router-link>
+                        <router-link to="/course">Курсы</router-link>
                     </li>
                     <li>
                         <router-link to="/blog">Блог</router-link>
