@@ -46,7 +46,7 @@ export default {
        margin: 0 auto;
        font-size: 14px;
        overflow: hidden;
-       background-color:#abbdefc7;
+       background-color:#6e90eec7;
        height: 60px;
 
        }

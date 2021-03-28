@@ -2,7 +2,7 @@
 
         
     <div class="mainMenu">
-        
+        <background/>
     <div class="block-menu" v-bind:style="{backgroundImage: 'url(./components/assets/images/logo.jpg)'}">
     <div class="text">
        <h1>Профессия Разработчик игр на Unity</h1>
@@ -19,10 +19,12 @@
     </div>
 </template>
 <script>
-
+import background from '../background/background'
 export default {
     name: '',
-    
+    components: {
+        background
+    }
 
 
     }
@@ -33,6 +35,7 @@ export default {
     text-align: left;
     display: flex;
     font-size: 15px;
+    
     
 }
 h1{
@@ -45,22 +48,29 @@ h1{
 p{
     margin-bottom: 0;
     font-size: 18px;
-    font-weight: 400
+    font-weight: 400px;
+    margin-left: 35px;
+    margin-top: 20px;
 }
 button{
     display: inline-block;
-    margin-right: 20px;
-    padding: 20px 48px;
+    margin-left: 60px;
+    padding: 16px 35px;
     border-radius: 12px;
     background-color: #6654d9;
     color: #fff;
-    font-size: 10px;
+    font-size: 13px;
     line-height: 1;
     font-weight: 600px;
     text-decoration: none
+
 }
 .text{
+    margin-left: 35px;
+    margin-top: 89px;
     top: -40px;
-
+    
+    
+    
 }
 </style>
