@@ -112,11 +112,8 @@ html{
   cursor:pointer;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-<<<<<<< HEAD
-  border-radius: 10;
-=======
+
   border-radius: 12;
->>>>>>> 7fcdecd942179da5d8251b0854f2e26564bd12e1
 }
 
 .box button:active{
