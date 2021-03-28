@@ -14,7 +14,7 @@
                         <a href="..components/transition.block">Курсы</a>
                     </li>
                     <li>
-                        <a href="#"><img src="assets/images/image.jpg" alt=""></a>
+                        <a href="#"><img src="assets/images/image.jpg" alt="">Блог</a>
                     </li>
                 </ul>
             </div>
