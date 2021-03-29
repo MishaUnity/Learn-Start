@@ -10,6 +10,9 @@ export default {
     name: 'RegistrationPage',
     components: {
         RegistrationForm
+    },
+    data(){
+        
     }
 }
 </script>

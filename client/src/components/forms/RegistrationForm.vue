@@ -20,7 +20,7 @@
                 class='feedback-input'
                 required placeholder='Введите пароль'><span></span>
         <br>
-        <input type='age' name='pass'
+        <input type='years' name='pass'
                 class='feedback-input'
                 required placeholder='Введите ваш возвраст'><span></span>
         <br>
@@ -42,15 +42,39 @@ export default {
                login: '',
                password: '',
                //добавить имя и фамилию
-           }
-       }
+           },
+           step: 1,
+         regMessage: false,
+             years: [],
+          yearEnd: 2021,
+          reqText: 'Поле обязательно для заполнения',
+         alphaText: 'Запрещены цифры, проблемы и другие символы',
+         minLenghtText: 'Минимальная длна 6 символов',
+             formReg: {
+       name: '',
+       surname: '',
+       year: '',
+       password: '',
+       login: '',
+   },
+       }    
    },
    methods: {
        onSubmit() {
            // добавить вызов действия
            this.$router.push({name: 'login'})
+        
+       },
+       status(validation) {
+           return{
+               'is-invalid':validation.$error,
+               'error': validation.$error
+           }
        }
+       
    },
+   
+   
    
 }
 
@@ -81,7 +105,7 @@ form{background-color:rgba(231, 231, 231, 0.397);
  font-weight:300;
  font-size: 18px;
  line-height: 22px;
- background-color: rgba(231, 231, 231, 0.397);
+ background-color: rgba(255, 255, 255, 0.658);
  padding: 13px 13px 13px 5px;
 width:100%;
  box-sizing: border-box;
