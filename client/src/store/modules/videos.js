@@ -72,7 +72,7 @@ export default
         },
 
         //Обновление данных видео
-        Update_VIDEOS({commit}, params)
+        UPDATE_VIDEOS({commit}, params)
         {
             axios.post('http://localhost:3000/videos/Update_Video', params)
             .catch(function(error)
