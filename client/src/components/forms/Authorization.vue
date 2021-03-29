@@ -40,7 +40,7 @@
 </template>
 <script>
 import Wrapper from '../wrappers/Wrapper.vue'
-
+import { mapActions, mapGetters } from 'vuex'
 export default {
   name:'Authorization',
   components:{
@@ -54,9 +54,22 @@ export default {
           }
       }
   },
+  computed: {
+    ...mapGetters([
+      'USER_ID'
+    ])
+  },
   methods: {
+    ...mapActions([
+      'LOGIN'
+    ]),
     onSubmit() {
-        this.$router.push({name: 'main'})
+      this.LOGIN(this.form)
+      .then(() => {
+        if (this.USER_ID > 0) {
+          this.$router.push({name: 'main'})
+        }
+      })
     },
     onRegClicked() {
         this.$router.push({name: 'registration'})
