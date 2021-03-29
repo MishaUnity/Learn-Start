@@ -4,39 +4,39 @@ export default
 {
     //переменные
     state: {
-        userId: 0,
-        login,
-        password,
-        user_name,
-        surname,
-        age
+        UserId: 0,
+        Login,
+        Password,
+        User_name,
+        Surname,
+        Age
     },
     getters: {
         //получение данных
         Get_User(state, param_id) 
         {
             if(param_id == 0)
-                return state.userId; 
+                return state.UserId; 
 
             if(param_id == 1)
-                return state.login;
+                return state.Login;
 
             if(param_id == 2)
-                return state.password;
+                return state.Password;
 
             if(param_id == 3)
-                return state.user_name;
+                return state.User_name;
 
             if(param_id == 4)
-                return state.surname;
+                return state.Surname;
 
             if(param_id == 5)
-                return state.age;
+                return state.Age;
         }
     },
     mutations: {
         //установка данных в переменные
-        SET_USER(state, id, login, password, user_name, surname, age)
+        Set_User(state, id, login, password, user_name, surname, age)
         {
             userId = id;
             state.login = login;
