@@ -4,17 +4,17 @@
             <div class="container">
                 <div id="logo"></div>
                     <li>
-                        <a href="#">(здесь будет логотип)</a>
+                        <a href="#">UРгрейд</a>
                     </li>
                 <ul class="nav">
                     <li>
-                        <a href="#">Главная</a>
+                        <router-link to="/main">Главная</router-link>
                     </li>
                     <li>
-                        <a href="..components/transition.block">Курсы</a>
+                        <router-link to="/course">Курсы</router-link>
                     </li>
                     <li>
-                        <a href="#"><img src="assets/images/image.jpg" alt=""></a>
+                        <router-link to="/blog">Блог</router-link>
                     </li>
                 </ul>
             </div>
@@ -25,7 +25,7 @@
 
 
 export default {
-    name:'MainPages',
+    name:'Wrapper',
     components:{
           
     }
@@ -44,9 +44,13 @@ export default {
        position: relative;
        width: 1400px;
        margin: 0 auto;
-       font-size: 14px;
+       font-size: 28px;
        overflow: hidden;
+
+       background-color:#248ab8;
+
        background-color:#776dfcc7;
+
        height: 60px;
        box-shadow: 0 0 10px rgba(102, 130, 255, 0.473);
        font-family: sans-serif;
@@ -54,7 +58,7 @@ export default {
 
    #logo{
        position: absolute;
-       top: 50%;
+       top: 100%;
        transform: translateY(-50%);
        
        float: left;
@@ -72,7 +76,7 @@ export default {
    ul.nav li{
        position: relative;
        float: left;
-       
+       top: -20px;
    }
    ul.nav li a{
        transition: color 0.2 linear;
@@ -81,14 +85,19 @@ export default {
 
    }
    ul.nav li:hover a {
-       color: rgb(48, 76, 138);
+       color: #7ddcffda;
        transition: 0.3s ease all; 
+       
    }
    ul.nav li a{
-       padding: 21px;
+       padding: 28px;
        color: initial;
-       text-decoration: initial;
-       color: rgb(255, 255, 255);
-       transition: 0.3s ease all; 
+       text-decoration: initia;
+       -webkit-transition: all 0.4s;
+        transition: all 0.4s;
+        color: rgba(91, 112, 104, 0.849);
+        font-size: 19px;
+           
+
    }
 </style>

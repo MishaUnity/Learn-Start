@@ -120,17 +120,20 @@ html{
 
 .box button:active{
   background:#2746ae;
+  border-radius: 12;
 }
 
 .box button:hover{
   background:   #1797ff;
     -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  border-radius: 12;
 }
 
 .login-links-block {
   width: 55%;
   margin: 0 auto;
+  border-radius: 12;
 }
 
 .forgot-pass-link,
