@@ -3,14 +3,14 @@
         <wrapper/>
         <media
       :kind="'video'"
-      :isMuted="(false)"
-      :src="['https://www.w3schools.com/html/mov_bbb.mp4']"
-      :poster="'https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217'"
+      :isMuted="(true)"
+      :src="['https://youtu.be/TEKKimEEMyM']"
+      :poster="'https://habrastorage.org/webt/5-/yg/ix/5-ygixba2lpccqd9gafgjzkqwoy.jpeg'"
       :autoplay="true"
       :controls="true"
       :loop="true"
       :ref="'fish'"
-      :style="{width: '500px'}"
+      :style="{width: '900px'}"
       @pause="handle()"
         >
         </media>
@@ -37,9 +37,14 @@ export default {
 }
 </script>
 <style scoped>
-.course-page{
-     width: 100%;
-     text-align: center;
-     margin-top: 40vh;
+media{
+    
+    text-align: center;
+    margin-top: 40vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 </style>

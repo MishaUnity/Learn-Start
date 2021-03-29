@@ -5,6 +5,8 @@ import MainPage from '../components/pages/MainPage'
 import LoginPage from '../components/pages/LoginPage'
 import RegistrationPage from '../components/pages/RegistrationPage'
 import Blogpage from '../components/pages/Blogpage'
+import CoursePage from "../components/pages/CoursePage"
+import BlogPost from '../components/BlogPost/blogPost'
 
 
 Vue.use(VueRouter);
@@ -33,9 +35,14 @@ let router = new VueRouter({
             component: Blogpage
         },
         {
-            name: 'coursepage',
-            path: '/coursepage',
-            component: Blogpage
+            name: 'coursePage',
+            path: '/course',
+            component: CoursePage
+        },
+        {
+            name: 'BlogPost',
+            path: '/BlogPost',
+            component: BlogPost
         }
 
     ]
