@@ -109,4 +109,7 @@ p{
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
+.post-title{
+    top: -20px;
+}
 </style>

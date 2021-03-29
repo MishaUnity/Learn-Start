@@ -117,6 +117,9 @@ p{
 .text-content ::before{
 padding: 15px 50px 25px;
 }
+.button{
+    top: -10px;
+}
 p{
     margin: 0 0 10px;
     font-size: var(--text-font-size);
