@@ -13,37 +13,15 @@ export default
     },
     getters: {
         //получение данных
-        GET_USER(state, param_id) 
+        USER_ID(state) 
         {
-            if(param_id == 0)
-                return state.UserId; 
-
-            if(param_id == 1)
-                return state.Login;
-
-            if(param_id == 2)
-                return state.Password;
-
-            if(param_id == 3)
-                return state.User_name;
-
-            if(param_id == 4)
-                return state.Surname;
-
-            if(param_id == 5)
-                return state.Age;
+            return state.userId;
         }
     },
     mutations: {
         //установка данных в переменные
-        SET_USER(state, id, login, password, user_name, surname, age)
-        {
-            userId = id;
-            state.login = login;
-            state.password = password;
-            state.user_name = user_name;
-            state.surname = surname;
-            state.age = age;
+        SET_USER_ID(state, id) {
+            state.userId = id;
         }
     },
     actions:
@@ -54,8 +32,7 @@ export default
             axios.post('http://localhost:3000/users/Get_User', params)
             .then(function(result)
             {
-                commit('SET_USER', result.data.id, result.data.login, result.data.password, result.data.name,
-                result.data.surname, result.data.age);
+                commit('SET_USER', result.data.id);
             })
             .catch(function(error)
             {
