@@ -59,7 +59,7 @@ POST http://localhost:3000/lessons/Get_Lesson
 Content-Type: application/json
 
 {
-    "id" : 2
+    "id" : 1
 }
 
 ###
@@ -70,7 +70,8 @@ Content-Type: application/json
 {
     "lesson_id" : 1,
     "url" : "Массивы",
-    "name" : "Массивы в С++"
+    "name" : "Массивы в С++",
+    "num" : 1
 }
 
 ###
@@ -79,7 +80,7 @@ POST http://localhost:3000/videos/Delete_Video
 Content-Type: application/json
 
 {
-    "id" : 4
+    "id" : 7
 }
 
 ###
@@ -88,7 +89,19 @@ POST http://localhost:3000/videos/Get_Videos
 Content-Type: application/json
 
 {
-    "id" : 2
+    "id" : 1
+}
+
+###
+
+POST http://localhost:3000/videos/Update_Video
+Content-Type: application/json
+
+{
+    "id" : 5,
+    "url" : "АААА",
+    "name" : "Главный аргумент",
+    "num" : 1
 }
 
 ###

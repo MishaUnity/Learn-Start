@@ -4,19 +4,20 @@ var db = require('../bd');
 
 class video
 {
-    id;
-    url;
-    name;
+  id;
+  url;
+  name;
+  number;
 }
 
 //Добовление видео в курс
 router.post('/Add_Video', function(req, res, next) 
 {
   //индетификаторы пользователя и курса
-  var data = [req.body.lesson_id, req.body.url, req.body.name];
+  var data = [req.body.lesson_id, req.body.url, req.body.name, req.body.num];
 
   //SQL запрос
-  db.any('INSERT INTO videos (lesson_id, url, name) VALUES ($1, $2, $3)', data)
+  db.any('INSERT INTO videos (lesson_id, url, name, num) VALUES ($1, $2, $3, $4)', data)
   .then(function(result) 
   {
     res.sendStatus(200);
@@ -56,21 +57,42 @@ router.post('/Get_Videos', function(req, res, next)
   var videos = [new video];
 
   //SQL запрос
-  db.any('Select id, url, name FROM videos WHERE lesson_id = $1', data)
+  db.any('Select id, url, name, num FROM videos WHERE lesson_id = $1', data)
 
   .then(function(result) 
   {
-    for(var num = 0; num < result.length; num ++)
+    for(var i = 0; i < result.length; i ++)
     {
         var new_video = new video;
-        new_video.id = result[num].id;
-        new_video.url = result[num].url;
-        new_video.name = result[num].name;
+        new_video.id = result[i].id;
+        new_video.url = result[i].url;
+        new_video.name = result[i].name;
+        new_video.number = result[i].num;
 
-        videos[num] = new_video;
+        videos[i] = new_video;
     }
 
     res.send(videos);
+  })
+  .catch(function(error) 
+  {
+    //вывод ошибки(если она появилась)    
+    console.log(error);
+  });
+});
+
+//Update video
+router.post('/Update_Video', function(req, res, next) 
+{
+  //индетификатор видео
+  var data = [req.body.id, req.body.url, req.body.name, req.body.num];
+
+  //SQL запрос
+  db.any('UPDATE videos SET name = $3, url = $2, num = $4 WHERE id = $1', data)
+
+  .then(function(result) 
+  {
+    res.sendStatus(200);
   })
   .catch(function(error) 
   {
