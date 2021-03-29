@@ -4,16 +4,16 @@ export default
 {
     //переменные
     state: {
-        UserId: 0,
-        Login,
-        Password,
-        User_name,
-        Surname,
-        Age
+        userId: 0,
+        login,
+        password,
+        user_name,
+        surname,
+        age
     },
     getters: {
         //получение данных
-        Get_User(state, param_id) 
+        GET_USER(state, param_id) 
         {
             if(param_id == 0)
                 return state.UserId; 
@@ -36,7 +36,7 @@ export default
     },
     mutations: {
         //установка данных в переменные
-        Set_User(state, id, login, password, user_name, surname, age)
+        SET_USER(state, id, login, password, user_name, surname, age)
         {
             userId = id;
             state.login = login;

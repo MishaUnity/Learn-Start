@@ -11,7 +11,7 @@ export default
     },
     getters: {
         //получение данных
-        Get_Comment(state, param_id)
+        GET_COMMENT(state, param_id)
         {
             if(param_id == 0)
                 return state.id; 
@@ -28,7 +28,7 @@ export default
     },
     mutations: {
         //установка значений в переменные
-        Set_Comment(state, id, user_id, lesson_id, text)
+        SET_COMMENT(state, id, user_id, lesson_id, text)
         {
             state.id = id;
             state.user_id = user_id;
