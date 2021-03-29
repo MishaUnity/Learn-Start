@@ -47,7 +47,7 @@ export default {
        font-size: 28px;
        overflow: hidden;
 
-       background-color:#6e90eec7;
+       background-color:#248ab8;
 
        background-color:#776dfcc7;
 
@@ -76,7 +76,7 @@ export default {
    ul.nav li{
        position: relative;
        float: left;
-       top: -18px;
+       top: -20px;
    }
    ul.nav li a{
        transition: color 0.2 linear;
@@ -85,7 +85,7 @@ export default {
 
    }
    ul.nav li:hover a {
-       color: rgb(81, 245, 245);
+       color: #7ddcffda;
        transition: 0.3s ease all; 
        
    }
@@ -95,7 +95,7 @@ export default {
        text-decoration: initia;
        -webkit-transition: all 0.4s;
         transition: all 0.4s;
-        color: rgba(39, 39, 39, 0.788);
+        color: rgba(91, 112, 104, 0.849);
         font-size: 19px;
            
 

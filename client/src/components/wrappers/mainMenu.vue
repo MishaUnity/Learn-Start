@@ -55,12 +55,12 @@ button{
     margin-left: 60px;
     padding: 16px 35px;
     border-radius: 12px;
-    background-color: #6654d9;
+    background-color: #99e3f5e0;
     color: #fff;
     font-size: 13px;
     line-height: 1;
     font-weight: 600px;
-    text-decoration: none
+    text-decoration: none;
 
 }
 .text{
