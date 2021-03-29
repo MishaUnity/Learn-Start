@@ -1,6 +1,4 @@
 <template>
-
-        
     <div class="mainMenu">
         <background/>
     <div class="block-menu" v-bind:style="{backgroundImage: 'url(./components/assets/images/logo.jpg)'}">
@@ -13,7 +11,7 @@
             <br> с такими играми как: Rust, Firewatch, Pokémon Go и прочее.
          </p>
          <br>
-        <button>Записаться на курс</button>
+        <button><router-link to="/Recrding">Записаться курсы</router-link></button>
     </div>
    </div>
     </div>

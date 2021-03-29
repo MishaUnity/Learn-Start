@@ -85,16 +85,16 @@ export default {
 
    }
    ul.nav li:hover a {
-       color: rgb(48, 76, 138);
+       color: rgb(81, 245, 245);
        transition: 0.3s ease all; 
    }
    ul.nav li a{
        padding: 21px;
        color: initial;
        text-decoration: initia;
-       -webkit-transition: all 0.25s;
-        transition: all 0.25s;
-        color: rgba(85, 85, 85, 0.863);
+       -webkit-transition: all 0.4s;
+        transition: all 0.4s;
+        color: rgba(39, 39, 39, 0.788);
 
        
 

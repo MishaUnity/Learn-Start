@@ -1,3 +1,4 @@
+/* импорт библиотек*/
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 //подключение страниц
@@ -6,11 +7,12 @@ import LoginPage from '../components/pages/LoginPage'
 import RegistrationPage from '../components/pages/RegistrationPage'
 import Blogpage from '../components/pages/Blogpage'
 import CoursePage from "../components/pages/CoursePage"
-import BlogPost from '../components/BlogPost/blogPost'
+import BlogPost from '../components/blogPost/BlogPost'
+import Recording from '../components/blogPost/Recording'
 
 
 Vue.use(VueRouter);
-
+/* переход по страницам*/
 let router = new VueRouter({
     routes: [
         {
@@ -41,8 +43,13 @@ let router = new VueRouter({
         },
         {
             name: 'BlogPost',
-            path: '/BlogPost',
+            path: '/blogPost',
             component: BlogPost
+        },
+        {
+            name: 'RecordingPage',
+            path: '/recording',
+            component: Recording
         }
 
     ]

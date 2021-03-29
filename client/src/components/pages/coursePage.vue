@@ -10,7 +10,7 @@
       :controls="true"
       :loop="true"
       :ref="'fish'"
-      :style="{width: '900px'}"
+      :style="{width: '900px', display:'center'}"
       @pause="handle()"
         >
         </media>
