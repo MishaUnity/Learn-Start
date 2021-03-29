@@ -4,7 +4,7 @@
             <div class="container">
                 <div id="logo"></div>
                     <li>
-                        <a href="#">UРгрейд</a>
+                        <a href="#">АПгрейд</a>
                     </li>
                 <ul class="nav">
                     <li>

@@ -11,7 +11,7 @@
             <br> с такими играми как: Rust, Firewatch, Pokémon Go и прочее.
          </p>
          <br>
-        <button><router-link to="/Recrding">Записаться курсы</router-link></button>
+        <button><router-link to="/recording">Записаться курсы</router-link></button>
     </div>
    </div>
     </div>
@@ -29,6 +29,7 @@ export default {
 
 </script>
 <style scoped>
+
 .mainMenu{
     text-align: left;
     display: flex;

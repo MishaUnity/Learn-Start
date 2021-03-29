@@ -17,13 +17,18 @@
         </label>
         <br>
         <label>
-          <input type="radio" name="prog_lang" value="PHP">PHP
+          <input type="radio" name="prog_lang" value="Unity">Unity
         </label>
           <br>
         <label>
           <input type="radio" name="prog_lang" value="Python">Python
         </label>
+        <br>
+        <label>
+          <input type="radio" name="prog_lang" value="Web">Web
+        </label>
       </p>
+
       
       <label for="dop_info">Дополнительная информация:
         <br>
@@ -31,7 +36,7 @@
       </label>
       <br><br>
       
-      <label>Секретное слово:
+      <label>Секретное слово (для востановления учетной записи):
         <br>
         <input type="password" name="password" placeholder="*********">
       </label>
@@ -57,3 +62,6 @@ export default {
     }
 }
 </script>
+<style scoped>
+
+</style>
