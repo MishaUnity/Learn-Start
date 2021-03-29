@@ -4,7 +4,7 @@
             <div class="container">
                 <div id="logo"></div>
                     <li>
-                        <a href="#">(здесь будет логотип)</a>
+                        <a href="#">UPgraid</a>
                     </li>
                 <ul class="nav">
                     <li>
@@ -44,7 +44,7 @@ export default {
        position: relative;
        width: 1400px;
        margin: 0 auto;
-       font-size: 14px;
+       font-size: 28px;
        overflow: hidden;
 
        background-color:#6e90eec7;
@@ -58,7 +58,7 @@ export default {
 
    #logo{
        position: absolute;
-       top: 50%;
+       top: 100%;
        transform: translateY(-50%);
        
        float: left;
@@ -76,7 +76,7 @@ export default {
    ul.nav li{
        position: relative;
        float: left;
-       
+       top: -18px;
    }
    ul.nav li a{
        transition: color 0.2 linear;
@@ -87,16 +87,17 @@ export default {
    ul.nav li:hover a {
        color: rgb(81, 245, 245);
        transition: 0.3s ease all; 
+       
    }
    ul.nav li a{
-       padding: 21px;
+       padding: 28px;
        color: initial;
        text-decoration: initia;
        -webkit-transition: all 0.4s;
         transition: all 0.4s;
         color: rgba(39, 39, 39, 0.788);
-
-       
+        font-size: 19px;
+           
 
    }
 </style>

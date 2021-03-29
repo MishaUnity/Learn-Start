@@ -1,6 +1,7 @@
 <template>
     <div class="course-page">
         <wrapper/>
+        <div class="course">
         <media
       :kind="'video'"
       :isMuted="(true)"
@@ -14,6 +15,7 @@
       @pause="handle()"
         >
         </media>
+        </div>
     </div>
 </template>
 <script>
@@ -46,5 +48,9 @@ media{
     width: 100%;
     height: 100%;
     position: absolute;
+}
+.course{
+      margin-left: 250px;
+
 }
 </style>
